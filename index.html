@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Web AR Platform</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #000; color: #fff; font-family: sans-serif; }
+    #uploadUI { position: fixed; top: 10px; left: 10px; z-index: 10; }
+    canvas { position: absolute; top: 0; left: 0; }
+  </style>
+</head>
+<body>
+  <div id="uploadUI">
+    <input type="file" id="modelUpload" accept=".glb,.gltf">
+    <button onclick="startAR()">Start AR</button>
+  </div>
+  <video id="video" autoplay playsinline muted style="display:none;"></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://docs.opencv.org/4.5.2/opencv.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
